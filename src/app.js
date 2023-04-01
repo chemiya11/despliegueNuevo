@@ -7,6 +7,8 @@ const app = express()//llamo de express
 app.use(cors())
 app.use(express.static("frontend"));
 
+
+
 app.get('/busqueda', async (req, res) => {//ruta / hago consulta para ver usuarios y devuelvo json
   const { id } = req.params
     let sql = `select * from users`//hago select de todos
