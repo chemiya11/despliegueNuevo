@@ -6,9 +6,10 @@ const {
   DB_USER,
   DB_PORT
 } =require( './config.js')
+require('dotenv').config();
 
 const conexion = mysql.createConnection({
-  host: DB_HOST,
+  host: process.env.DB_HOST,
   user: DB_USER,
   password: DB_PASSWORD,
   port:DB_PORT,
